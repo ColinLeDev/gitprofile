@@ -354,18 +354,26 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               )}
               {social?.phone && (
                 <ListItem
-                  icon={<RiPhoneFill />}
-                  title="Phone:"
-                  value={social.phone}
-                  link={`tel:${social.phone}`}
+                icon={<RiPhoneFill />}
+                title="Phone:"
+                value={social.phone}
+                link={`tel:${social.phone}`}
                 />
               )}
               {social?.email && (
                 <ListItem
-                  icon={<RiMailFill />}
-                  title="Email:"
-                  value={social.email}
-                  link={`mailto:${social.email}`}
+                icon={<RiMailFill />}
+                title="Email:"
+                value={social.email}
+                link={`mailto:${social.email}`}
+                />
+              )}
+              {social?.credly && (
+                <ListItem
+                  icon={<FaTelegram />}
+                  title="Credly (badges)"
+                  value={social.credly}
+                  link={`https://www.credly.com/users/${social.credly}`}
                 />
               )}
             </Fragment>

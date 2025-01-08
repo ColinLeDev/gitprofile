@@ -206,6 +206,11 @@ interface Social {
    * Email
    */
   email?: string;
+
+  /**
+   * Credly
+   */
+  credly?: string;
 }
 
 interface Resume {
