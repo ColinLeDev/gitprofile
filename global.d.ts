@@ -403,6 +403,10 @@ interface Config {
    * Education list
    */
   educations?: Array<Education>;
+  /**
+   * Bénévolat list
+   */
+  benevolats?: Array<Benevolat>;
 
   /**
    * Publication list
