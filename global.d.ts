@@ -215,14 +215,6 @@ interface Resume {
   fileUrl?: string;
 }
 
-interface Experience {
-  company?: string;
-  position?: string;
-  from: string;
-  to: string;
-  companyLink?: string;
-}
-
 interface Certification {
   body?: string;
   name?: string;
@@ -354,7 +346,7 @@ interface Config {
   /**
    * Experience list
    */
-  experiences?: Array<Experience>;
+  experiences?: Array<TimeCard>;
 
   /**
    * Certifications list

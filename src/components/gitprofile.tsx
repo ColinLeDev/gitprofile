@@ -19,7 +19,6 @@ import AvatarCard from './avatar-card';
 import { Profile } from '../interfaces/profile';
 import DetailsCard from './details-card';
 import SkillCard from './skill-card';
-import ExperienceCard from './experience-card';
 import EducationCard from './education-card';
 import CertificationCard from './certification-card';
 import TimeCard from './time-card';
@@ -219,9 +218,10 @@ const GitProfile = ({ config }: { config: Config }) => {
                     />
                   )}
                   {sanitizedConfig.experiences.length !== 0 && (
-                    <ExperienceCard
+                    <TimeCard
                       loading={loading}
-                      experiences={sanitizedConfig.experiences}
+                      title="Experiences"
+                      timecards={sanitizedConfig.experiences}
                     />
                   )}
                   {sanitizedConfig.certifications.length !== 0 && (

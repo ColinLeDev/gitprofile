@@ -69,14 +69,6 @@ export interface SanitizedResume {
   fileUrl?: string;
 }
 
-export interface SanitizedExperience {
-  company?: string;
-  position?: string;
-  from: string;
-  to: string;
-  companyLink?: string;
-}
-
 export interface SanitizedCertification {
   body?: string;
   name?: string;
