@@ -91,6 +91,15 @@ export interface SanitizedEducation {
   to: string;
 }
 
+export interface SanitizedTimeCard {
+  from: string;
+  to?: string;
+  title?: string;
+  titleLink?: string;
+  description?: string;
+  descriptionLink?: string;
+}
+
 export interface SanitizedPublication {
   title: string;
   conferenceName?: string;

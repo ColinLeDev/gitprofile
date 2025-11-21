@@ -237,6 +237,15 @@ interface Education {
   to: string;
 }
 
+interface TimeCard {
+  from: string;
+  to: string;
+  title?: string;
+  titleLink?: string;
+  description?: string;
+  descriptionLink?: string;
+}
+
 interface Publication {
   title: string;
   conferenceName?: string;
