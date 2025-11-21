@@ -43,7 +43,7 @@ const CONFIG = {
           description:
             'Create a web platform to manage and display items, incorporating a system to acknowledge and progress through a predefined list of instances.',
           imageUrl:
-            'https://img.col1n.fr/UAPVlarge.png',
+            'https://univ-avignon.fr/wp-content/themes/avignon-universite/dist/images/logos/logo-white.svg',
           link: 'https://ueo.univ-avignon.fr/',
         },
         // {
@@ -83,11 +83,11 @@ const CONFIG = {
     website: 'https://www.col1n.fr',
     phone: '',
     email: 'colin@col1n.fr',
-    // credly: 'colin.palazzetti-rubera',
+    credly: 'colin.palazzetti-rubera',
   },
   resume: {
     fileUrl:
-      '', // Empty fileUrl will hide the `Download Resume` button.
+      'https://cloud.col1n.fr/s/cv', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'HTML/CSS/JS',
@@ -98,7 +98,32 @@ const CONFIG = {
     'Git',
     'Java (bases)',
   ],
+  skillsPerso: [
+    'HTML/CSS/JS',
+    'PHP',
+    'SQL',
+    'nginx',
+    'Docker (compose,swarm)',
+    'Portainer',
+    'Linux',
+    'Git',
+    'Symfony',
+  ],
   experiences: [
+    {
+      company: 'Équipe Identité, Accès et Modern Workplace - Groupement Hospitalier de Territoire du Vaucluse (CH Avignon)', 
+      position: 'Stage',
+      from: 'May 2025',
+      to: 'July 2025',
+      companyLink: 'https://www.ch-avignon.fr/hopitaux-publics-de-vaucluse',
+    },
+    {
+      company: 'APUI - Avignon Université',
+      position: 'Stage',
+      from: 'June 2024',
+      to: 'June 2024',
+      companyLink: 'https://apui.univ-avignon.fr/',
+    },
     {
       company: 'APUI - Avignon Université',
       position: 'Assistant numérique',
@@ -106,15 +131,14 @@ const CONFIG = {
       to: 'August 2024',
       companyLink: 'https://apui.univ-avignon.fr/',
     },
-    {
-      company: 'APUI - Avignon Université',
-      position: 'Stage',
-      from: 'June 2024',
-      to: 'June 2024',
-      companyLink: 'https://example.com',
-    },
   ],
   certifications: [
+    {
+      name: 'Languagecert English',
+      body: 'C2 (Listening, Reading)',
+      year: '19/02/2025',
+      link: 'https://cloud.col1n.fr/s/2025_LanguageCert_C2',
+    },
     {
       name: 'CCNA 1',
       body: 'Introduction to Networks',
@@ -127,25 +151,98 @@ const CONFIG = {
       year: '08/03/2022 (expires 08/03/2025)',
       link: 'https://app.pix.fr/verification-certificat',
     },
+    {
+      name: 'Cambridge English',
+      body: 'B2 First (FCE)',
+      year: '03/2022',
+      link: 'https://cloud.col1n.fr/s/2022_cambridge_B2',
+    },
   ],
   educations: [
     {
       institution: 'Avignon Université',
-      degree: 'Master en Informatique - Parcours Intelligence Artificielle',
+      degree: 'Graduate in Computer Science',
       from: '2025',
       to: 'expected 2027',
+      companyLink: 'https://apui.univ-avignon.fr/',
     },
     {
       institution: 'Avignon Université',
-      degree: 'Licence en Informatique',
+      degree: 'Undergraduate in Computer Science',
       from: '2022',
       to: '2025',
+    },
+    {
+      institution: 'Université de Montréal',
+      degree: 'Exchange student in Computer Science',
+      from: 'Sept. 2024',
+      to: 'Dec. 2024',
     },
     {
       institution: 'Lycée Alphonse Benoît',
       degree: 'Baccalauréat : Maths - Numérique et Sciences Informatiques',
       from: '2019',
       to: '2022',
+    },
+  ],
+  benevolats: [
+    {
+      institution: 'CERI - Avignon Université',
+      title: 'Représentant des étudiants au Conseil de perfectionnement',
+      from: 'Sept. 2022',
+      to: 'present',
+      link: 'https://ceri.univ-avignon.fr/presentation-2/#:~:text=le%20Conseil%20de%20Perfectionnement%20(2%20fois%20par%20an)%20qui%20a%20pour%20objectif%20le%20suivi%20de%20la%20discipline%20et%20des%20m%C3%A9tiers%2C%20des%20poursuites%20d%E2%80%99%C3%A9tude%20et%20de%20l%E2%80%99insertion%20professionnelle%20des%20%C3%A9tudiants%2C%20ainsi%20que%20la%20vie%20des%20formations%20d%C3%A9livr%C3%A9es%20au%20sein%20du%20CERI',
+      companyLink: 'https://ceri.univ-avignon.fr/',
+    },
+    {
+      institution: 'CERI - Avignon Université',
+      title: 'Élu étudiant au Conseil de la composante',
+      from: 'Mars 2024',
+      to: 'Mars 2026',
+      link: 'https://ceri.univ-avignon.fr/presentation-2/#:~:text=Le%20Conseil%20du%20CERI%20(1%20par%20mois)%20qui%20est%20le%20conseil%20de%20la%20composante%20qui%20traite%20de%20la%20vie%20p%C3%A9dagogique%20et%20de%20recherche%20au%20sein%20du%20CERI',
+      companyLink: 'https://ceri.univ-avignon.fr/',
+    },
+    {
+      institution: 'Journées Portes Ouvertes - CERI - Avignon Université',
+      title: 'Présentation des formations et du batiment aux futurs étudiants et leurs familles',
+      from: '1 fev. 2025',
+      link: 'https://ceri.univ-avignon.fr/journees-portes-ouvertes-2025/',
+      // to: 'mars 2026',
+    },
+    {
+      institution: 'Forum des Études Supérieures - Avignon Université',
+      title: 'Staff (responsable accueil des visiteurs, orientation)',
+      from: '25 jan. 2025',
+      link: 'https://univ-avignon.fr/forum-des-etudes-superieures/',
+      // to: 'mars 2026',
+    },
+    {
+      institution: 'Journées Portes Ouvertes - CERI - Avignon Université',
+      title: 'Présentation des formations et du batiment aux futurs étudiants et leurs familles',
+      from: '3 fev. 2025',
+      link: 'https://ceri.univ-avignon.fr/jpo-journee-portes-ouvertes-le-3-fevrier-2024/',
+      // to: 'mars 2026',
+    },
+    {
+      institution: 'Forum des Études Supérieures - Avignon Université',
+      title: 'Staff (accueil des visiteurs, orientation)',
+      from: '27 jan. 2024',
+      // to: 'mars 2026',
+      link: 'https://univ-avignon.fr/forum-des-etudes-superieures/',
+    },
+    {
+      institution: 'Forum des Études Supérieures - Avignon Université',
+      title: 'Présentation des formations CMI et Licence Informatique',
+      from: '4 fev. 2023',
+      // to: 'mars 2026',
+      link: 'https://ceri.univ-avignon.fr/formations/cursus-master-ingenierie-en-informatique/',
+      companyLink: 'https://univ-avignon.fr/forum-des-etudes-superieures/',
+    },
+    {
+      institution: 'Association Dire et Lire – École Lucie Aubrac',
+      title: 'Participation à la buvette (service et encaissement), Vente des livres (scanner, encaissement : espèces, chèques, CB). \nAssistances ponctuelles pour la partie informatique depuis 2019',
+      from: '2013',
+      to: '2019',
     },
   ],
   publications: [
@@ -162,7 +259,7 @@ const CONFIG = {
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'col1n', // to hide blog section, keep it empty
+    username: '', // to hide blog section, keep it empty
     limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
@@ -238,10 +335,10 @@ const CONFIG = {
 
   // Optional Footer. Supports plain text or HTML.
   footer: `From <a 
-    class="text-primary" href="https://github.com/arifszn/gitprofile"
+    class="text-primary" href="https://github.col1n.fr/gitprofile"
     target="_blank"
     rel="noreferrer"
-  >GitProfile</a>`,
+  >GitProfile (fork)</a>`,
 
   enablePWA: true,
 };
