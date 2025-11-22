@@ -118,6 +118,7 @@ export interface SanitizedConfig {
   social: SanitizedSocial;
   resume: SanitizedResume;
   skills: Array<string>;
+  skillsPerso: Array<string>;
   experiences: Array<SanitizedTimeCard>;
   educations: Array<SanitizedTimeCard>;
   certifications: Array<SanitizedTimeCard>;

@@ -330,6 +330,11 @@ interface Config {
   skills?: Array<string>;
 
   /**
+   * Personnal Skill list
+   */
+  skillsPerso?: Array<string>;
+
+  /**
    * Experience list
    */
   experiences?: Array<TimeCard>;
