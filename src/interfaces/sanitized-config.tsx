@@ -121,6 +121,7 @@ export interface SanitizedConfig {
   experiences: Array<SanitizedTimeCard>;
   educations: Array<SanitizedTimeCard>;
   certifications: Array<SanitizedTimeCard>;
+  benevolats: Array<SanitizedTimeCard>;
   publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;

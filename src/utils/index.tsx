@@ -117,6 +117,15 @@ export const getSanitizedConfig = (
             item.description ||
             item.descriptionLink,
         ) || [],
+      benevolats:
+        config?.benevolats?.filter(
+          (item) =>
+            item.from ||
+            item.to ||
+            item.title ||
+            item.titleLink ||
+            item.description ||
+            item.descriptionLink,
         ) || [],
       publications: config?.publications?.filter((item) => item.title) || [],
       googleAnalytics: {

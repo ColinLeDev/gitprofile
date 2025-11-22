@@ -345,6 +345,11 @@ interface Config {
   educations?: Array<TimeCard>;
 
   /**
+   * Benevolat list
+   */
+  benevolats?: Array<TimeCard>;
+
+  /**
    * Publication list
    */
   publications?: Array<Publication>;

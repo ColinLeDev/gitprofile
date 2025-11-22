@@ -215,6 +215,13 @@ const GitProfile = ({ config }: { config: Config }) => {
                       skills={sanitizedConfig.skills}
                     />
                   )}
+                  {sanitizedConfig.benevolats.length !== 0 && (
+                    <TimeCard
+                      loading={loading}
+                      title="Bénévolat"
+                      timecards={sanitizedConfig.benevolats}
+                    />
+                  )}
                   {sanitizedConfig.experiences.length !== 0 && (
                     <TimeCard
                       loading={loading}
