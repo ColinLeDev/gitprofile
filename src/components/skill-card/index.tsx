@@ -2,9 +2,11 @@ import { skeleton } from '../../utils';
 
 const SkillCard = ({
   loading,
+  title,
   skills,
 }: {
   loading: boolean;
+  title?: string;
   skills: string[];
 }) => {
   const renderSkeleton = () => {
@@ -28,7 +30,7 @@ const SkillCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">Tech Stack</span>
+              <span className="text-base-content opacity-70">{title ?? "Tech Stack"}</span>
             )}
           </h5>
         </div>
