@@ -186,9 +186,9 @@ const GitProfile = ({ config }: { config: Config }) => {
       ) : (
         <>
           <div className={`p-4 lg:p-10 min-h-full ${BG_COLOR}`}>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 rounded-box">
               <div className="col-span-1">
-                <div className="grid grid-cols-1 gap-6">
+                <div className="grid grid-cols-1 gap-5">
                   {!sanitizedConfig.themeConfig.disableSwitch && (
                     <ThemeChanger
                       theme={theme}
@@ -203,68 +203,84 @@ const GitProfile = ({ config }: { config: Config }) => {
                     avatarRing={sanitizedConfig.themeConfig.displayAvatarRing}
                     resumeFileUrl={sanitizedConfig.resume.fileUrl}
                   />
-                  <DetailsCard
-                    profile={profile}
-                    loading={loading}
-                    github={sanitizedConfig.github}
-                    social={sanitizedConfig.social}
-                  />
-                  {sanitizedConfig.skills.length !== 0 && (
-                    <SkillCard
-                      loading={loading}
-                      title="Tech Stack - Self-Taught"
-                      skills={sanitizedConfig.skills}
-                    />
-                  )}
-                  {sanitizedConfig.skillsPerso.length !== 0 && (
-                    <SkillCard
-                      loading={loading}
-                      title="Tech Stack - Education"
-                      skills={sanitizedConfig.skillsPerso}
-                    />
-                  )}
+                  <div className="grid grid-cols-1 lg:grid-cols-8 gap-2 rounded-box">
+                    <div className="lg:col-span-5 col-span-1">
+                      <div className="grid grid-cols-1 gap-2">
+                        <DetailsCard
+                          profile={profile}
+                          loading={loading}
+                          github={sanitizedConfig.github}
+                          social={sanitizedConfig.social}
+                        />
+                      </div>
+                    </div>
+                    <div className="lg:col-span-3 col-span-1">
+                      <div className="grid grid-cols-1 gap-2">
+                        {sanitizedConfig.skills.length !== 0 && (
+                          <SkillCard
+                            loading={loading}
+                            title="Tech Stack - Self-Taught"
+                            skills={sanitizedConfig.skills}
+                          />
+                        )}
+                        {sanitizedConfig.skillsPerso.length !== 0 && (
+                          <SkillCard
+                            loading={loading}
+                            title="Tech Stack - Education"
+                            skills={sanitizedConfig.skillsPerso}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="lg:col-span-2 col-span-1">
-                <div className="grid grid-cols-1 gap-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-box">
-              <div className="col-span-1">
-                <div className="grid grid-cols-1 gap-6">
-                  {sanitizedConfig.educations.length !== 0 && (
-                    <TimeCard
-                      loading={loading}
-                      title="Education"
-                      timecards={sanitizedConfig.educations}
-                    />
-                  )}
-                  {sanitizedConfig.certifications.length !== 0 && (
-                    <TimeCard
-                      loading={loading}
-                      title="Certifications"
-                      timecards={sanitizedConfig.certifications}
-                    />
-                  )}
-                </div>
-              </div>
-              <div className="lg:col-span-1 col-span-1">
-                <div className="grid grid-cols-1 gap-6">
-                  {sanitizedConfig.experiences.length !== 0 && (
-                    <TimeCard
-                      loading={loading}
-                      title="Experiences"
-                      timecards={sanitizedConfig.experiences}
-                    />
-                  )}
-                  {sanitizedConfig.benevolats.length !== 0 && (
-                    <TimeCard
-                      loading={loading}
-                      title="Bénévolat"
-                      timecards={sanitizedConfig.benevolats}
-                    />
-                  )}
+                <div className="grid grid-cols-1 gap-5">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 rounded-box">
+                    <div className="col-span-1">
+                      <div className="grid grid-cols-1 gap-5">
+                        {sanitizedConfig.educations.length !== 0 && (
+                          <TimeCard
+                            loading={loading}
+                            title="Education"
+                            timecards={sanitizedConfig.educations}
+                          />
+                        )}
+                        {sanitizedConfig.certifications.length !== 0 && (
+                          <TimeCard
+                            loading={loading}
+                            title="Certifications"
+                            timecards={sanitizedConfig.certifications}
+                          />
+                        )}
+                      </div>
+                    </div>
+                    <div className="lg:col-span-1 col-span-1">
+                      <div className="grid grid-cols-1 gap-5">
+                        {sanitizedConfig.experiences.length !== 0 && (
+                          <TimeCard
+                            loading={loading}
+                            title="Experiences"
+                            timecards={sanitizedConfig.experiences}
+                          />
+                        )}
+                        {sanitizedConfig.benevolats.length !== 0 && (
+                          <TimeCard
+                            loading={loading}
+                            title="Bénévolat"
+                            timecards={sanitizedConfig.benevolats}
+                          />
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div className="grid gap-5 rounded-box">
+              <div className="col-span-1">
+                <div className="grid gap-5">
                   {sanitizedConfig.projects.github.display && (
                     <GithubProjectCard
                       header={sanitizedConfig.projects.github.header}
