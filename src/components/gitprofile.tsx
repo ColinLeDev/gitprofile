@@ -223,11 +223,18 @@ const GitProfile = ({ config }: { config: Config }) => {
                       skills={sanitizedConfig.skillsPerso}
                     />
                   )}
-                  {sanitizedConfig.experiences.length !== 0 && (
+                </div>
+              </div>
+              <div className="lg:col-span-2 col-span-1">
+                <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-box">
+              <div className="col-span-1">
+                <div className="grid grid-cols-1 gap-6">
+                  {sanitizedConfig.educations.length !== 0 && (
                     <TimeCard
                       loading={loading}
-                      title="Experiences"
-                      timecards={sanitizedConfig.experiences}
+                      title="Education"
+                      timecards={sanitizedConfig.educations}
                     />
                   )}
                   {sanitizedConfig.certifications.length !== 0 && (
@@ -237,17 +244,27 @@ const GitProfile = ({ config }: { config: Config }) => {
                       timecards={sanitizedConfig.certifications}
                     />
                   )}
-                  {sanitizedConfig.educations.length !== 0 && (
+                </div>
+              </div>
+              <div className="lg:col-span-1 col-span-1">
+                <div className="grid grid-cols-1 gap-6">
+                  {sanitizedConfig.experiences.length !== 0 && (
                     <TimeCard
                       loading={loading}
-                      title="Education"
-                      timecards={sanitizedConfig.educations}
+                      title="Experiences"
+                      timecards={sanitizedConfig.experiences}
+                    />
+                  )}
+                  {sanitizedConfig.benevolats.length !== 0 && (
+                    <TimeCard
+                      loading={loading}
+                      title="Bénévolat"
+                      timecards={sanitizedConfig.benevolats}
                     />
                   )}
                 </div>
               </div>
-              <div className="lg:col-span-2 col-span-1">
-                <div className="grid grid-cols-1 gap-6">
+            </div>
                   {sanitizedConfig.projects.github.display && (
                     <GithubProjectCard
                       header={sanitizedConfig.projects.github.header}
