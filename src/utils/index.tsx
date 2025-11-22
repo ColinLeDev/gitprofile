@@ -99,12 +99,24 @@ export const getSanitizedConfig = (
         ) || [],
       certifications:
         config?.certifications?.filter(
-          (certification) =>
-            certification.year || certification.name || certification.body,
+          (item) =>
+            item.from ||
+            item.to ||
+            item.title ||
+            item.titleLink ||
+            item.description ||
+            item.descriptionLink,
         ) || [],
       educations:
         config?.educations?.filter(
-          (item) => item.institution || item.degree || item.from || item.to,
+          (item) =>
+            item.from ||
+            item.to ||
+            item.title ||
+            item.titleLink ||
+            item.description ||
+            item.descriptionLink,
+        ) || [],
         ) || [],
       publications: config?.publications?.filter((item) => item.title) || [],
       googleAnalytics: {

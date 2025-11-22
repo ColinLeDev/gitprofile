@@ -19,8 +19,6 @@ import AvatarCard from './avatar-card';
 import { Profile } from '../interfaces/profile';
 import DetailsCard from './details-card';
 import SkillCard from './skill-card';
-import EducationCard from './education-card';
-import CertificationCard from './certification-card';
 import TimeCard from './time-card';
 import { GithubProject } from '../interfaces/github-project';
 import GithubProjectCard from './github-project-card';
@@ -225,15 +223,17 @@ const GitProfile = ({ config }: { config: Config }) => {
                     />
                   )}
                   {sanitizedConfig.certifications.length !== 0 && (
-                    <CertificationCard
+                    <TimeCard
                       loading={loading}
-                      certifications={sanitizedConfig.certifications}
+                      title="Certifications"
+                      timecards={sanitizedConfig.certifications}
                     />
                   )}
                   {sanitizedConfig.educations.length !== 0 && (
-                    <EducationCard
+                    <TimeCard
                       loading={loading}
-                      educations={sanitizedConfig.educations}
+                      title="Education"
+                      timecards={sanitizedConfig.educations}
                     />
                   )}
                 </div>

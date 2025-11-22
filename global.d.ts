@@ -215,20 +215,6 @@ interface Resume {
   fileUrl?: string;
 }
 
-interface Certification {
-  body?: string;
-  name?: string;
-  year?: string;
-  link?: string;
-}
-
-interface Education {
-  institution?: string;
-  degree?: string;
-  from: string;
-  to: string;
-}
-
 interface TimeCard {
   from: string;
   to: string;
@@ -351,12 +337,12 @@ interface Config {
   /**
    * Certifications list
    */
-  certifications?: Array<Certification>;
+  certifications?: Array<TimeCard>;
 
   /**
    * Education list
    */
-  educations?: Array<Education>;
+  educations?: Array<TimeCard>;
 
   /**
    * Publication list

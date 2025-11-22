@@ -69,20 +69,6 @@ export interface SanitizedResume {
   fileUrl?: string;
 }
 
-export interface SanitizedCertification {
-  body?: string;
-  name?: string;
-  year?: string;
-  link?: string;
-}
-
-export interface SanitizedEducation {
-  institution?: string;
-  degree?: string;
-  from: string;
-  to: string;
-}
-
 export interface SanitizedTimeCard {
   from: string;
   to?: string;
@@ -132,9 +118,9 @@ export interface SanitizedConfig {
   social: SanitizedSocial;
   resume: SanitizedResume;
   skills: Array<string>;
-  experiences: Array<SanitizedExperience>;
-  educations: Array<SanitizedEducation>;
-  certifications: Array<SanitizedCertification>;
+  experiences: Array<SanitizedTimeCard>;
+  educations: Array<SanitizedTimeCard>;
+  certifications: Array<SanitizedTimeCard>;
   publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;
