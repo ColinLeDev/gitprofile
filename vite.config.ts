@@ -56,7 +56,7 @@ export default defineConfig({
     CONFIG: CONFIG,
   },
   build: {
-    outDir: '/srv/www/cv.col1n.fr',
+    outDir: 'www',
     emptyOutDir: true,
   },
 });
